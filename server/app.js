@@ -36,9 +36,9 @@ app.use(
 
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: 'sql#9040', // 🔒 Replace with your DB password
-  database: 'singitronic_nextjs_testing_dbv1', // ✅ Replace with your DB name
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 });
 
 // Connect to database
